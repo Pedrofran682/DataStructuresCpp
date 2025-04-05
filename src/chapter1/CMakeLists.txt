@@ -1,4 +1,4 @@
-add_library(chapter1 main.cpp)
+add_library(chapter1 functions.cpp)
 
 
 target_include_directories(chapter1

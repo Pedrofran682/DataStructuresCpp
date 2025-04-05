@@ -4,6 +4,7 @@
 class IntCell {
 public:
   explicit IntCell(int initialValue = 0);
+  // Accessor - const keyword after '(' 
   int read() const;
   void write(int x);
 
