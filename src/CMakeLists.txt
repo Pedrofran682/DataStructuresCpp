@@ -10,7 +10,13 @@ message("  Source: ${PROJECT_SOURCE_DIR}")
 message("  Binary: ${PROJECT_BINARY_DIR}")
 message("  Version (alt): ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}")
 
-add_subdirectory(test)
-add_subdirectory(chapter1)
+add_executable(DataStructuresCpp main.cpp)
 
-message("Processing CMakeLists.txt")
+add_subdirectory("chapter1")
+
+target_link_libraries(DataStructuresCpp PUBLIC chapter1)
+
+target_include_directories(DataStructuresCpp PUBLIC
+                           "${PROJECT_BINARY_DIR}"
+                           )
+
